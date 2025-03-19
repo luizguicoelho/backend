@@ -1,37 +1,38 @@
 let com = ["coxinha de frango com catupiri", "pastel", "coxinha 500g", "coxinha 1kg", "risoles",]
 let vlr = ["2", "5", "15", "32", "3"]
-ct = 0;
 
-function mosCom() {
-    com.forEach((co) =>{
-        console.log(co)
-    })
-    vlr.forEach((vl) =>{
-        console.log(vl)
-    })
-
+function mostraCardapio() {
+    console.log("Cardápio:");
+    com.forEach((co, index) => {
+        console.log(`${co} - R$ ${vlr[index]}`);
+    });
 }
 
 
-function addPre(nvPre){
-    com.push(nvPre);
-}
-function addCom(nvCom){
-    com.push(nvCom);
+function addCom(nvCom, nvPre) {
+    com.push(nvCom); 
+    vlr.push(nvPre); 
 }
 
-mosCom();
+function mostraCardapioEspecial() {
+    console.log("Cardápio Especial (Desconto de 15% para Clientes Fidelizados):");
+    vlr.forEach((preco, index) => {
+        let precoComDesconto = preco * 0.85; 
+        console.log(`${com[index]} - R$ ${precoComDesconto.toFixed(2)}`);
+    });
+}
 
-addCom("torta");
-addCom("bolo");
-addPre("15");
-addPre("34");
-console.log("Lanches após adição");
-mosCom();
+mostraCardapio();
+
+addCom("torta", 15);
+addCom("bolo", 34);
+
+console.log("\nLanches após adição:");
+mostraCardapio();
+
+mostraCardapioEspecial();
 
 
-let vlrAtua = vlr.map((vl) => (vl * 0.9));
-console.log(vlrAtua)
 
 /*
 while(ct < esp.length){
