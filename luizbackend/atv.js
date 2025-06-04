@@ -19,11 +19,11 @@ console.log(indice)
 const subst = furiaCS.splice(1, 2,  "molodoy", "YEKINDAR")
 console.log(furiaCS)
 
-const map = furiaCS.map((carro) => carro.toUpperCase())
+const map = furiaCS.map((a) => a.toUpperCase())
 console.log(map)
 
 const sort = map.sort()
 console.log(sort)
 
-const filter = furiaCS.filter((carro) => carro.startsWith("y"))
+const filter = furiaCS.filter((a) => a.startsWith("y"))
 console.log(filter)
