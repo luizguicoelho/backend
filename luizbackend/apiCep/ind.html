@@ -72,8 +72,8 @@
         <label for="cep">CEP:</label>
         <input type="text" id="cep" name="cep" maxlength="8" required>
 
-        <label for="logradouro">Endereço (Rua):</label>
-        <input type="text" id="logradouro" name="logradouro" required>
+        <label for="rua">Endereço (Rua):</label>
+        <input type="text" id="rua" name="rua" required>
 
         <label for="bairro">Bairro:</label>
         <input type="text" id="bairro" name="bairro" required>
@@ -110,7 +110,7 @@
                 erro.textContent = 'CEP não encontrado.';
             } else {
                 erro.textContent = '';
-                document.getElementById('logradouro').value = data.logradouro || '';
+                document.getElementById('rua').value = data.logradouro || '';
                 document.getElementById('bairro').value = data.bairro || '';
                 document.getElementById('cidade').value = data.localidade || '';
                 document.getElementById('uf').value = data.uf || '';
